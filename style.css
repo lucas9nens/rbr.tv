@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&family=Permanent+Marker&display=swap');
+
+body {
+    background-color: #121212ff;
+    font-family: 'Staatliches';
+    color: #efefef;
+}
+
+.navbar{
+    background-color: #191919ff;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.navbar-logo-centered .navbar-nav .nav-link{
+  padding: .5em 1em;
+}
+
+.navbar-toggler{
+    border: none;
+    color: white;
+}
+
+.dropdown-menu{
+  background-color: #1d1d1dff;
+  width: 100%;
+  border-radius: 50px;
+}
+
+.report_box{
+    width: 80%;
+    position: relative;
+    top: 5px;
+    margin: auto;
+    height: 375px;
+}
+
+.score_info{
+    color: white;
+}
+
+input, label {
+    display: inline-block;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+}
+
+.score_cell{
+    border-radius: 50px;
+    border: none;
+    width: 110px;
+    height: 50px;
+    background-color: #1d1d1dff;
+}
+
+.long_cell{
+    width: 260px;
+    display: flex;
+    position: relative;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+
+}
+
+.btn {
+    border-radius: 50px;
+    margin: auto;
+    font-size: 24px;
+    position: relative;
+}
+
+.photo_button{
+    width: 260px;
+    position: relative;
+    top: 100px;
+    background-color: #1d1d1dff;
+    border: none;
+}
+
+.flex-parent {
+    display: flex;
+  }
+  
+  .jc-center {
+    justify-content: center;
+  }
+  
+  input.margin-right {
+    margin-right: 40px;
+  }
+
+#grad {
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #dc2430ff , #674ea7ff);
+    border: none;
+}
+
+svg {
+  display: block;
+  position: relative;
+  margin: auto;
+  top: 100px;
+  height: 100px;
+  width: 100px;
+  color: #efefefff; /* SVG path use currentColor to inherit this */
+}
+
+.circle {
+  stroke-dasharray: 76;
+  stroke-dashoffset: 76;
+  animation: draw 1s forwards;
+}
+
+.tick {
+  stroke-dasharray: 18;
+  stroke-dashoffset: 18;
+  animation: draw 1s forwards 1s;
+}
+
+@keyframes draw { 
+  to { stroke-dashoffset: 0 } 
+}
+
+/* index.html */
+
+.title_box{
+  background-color: #191919ff;
+  color: #efefef;
+  border-radius: 40px;
+  width: 337.5px;
+  padding: 30px;
+}
+
+.top {
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  border: 1px solid black;
+  z-index: 1;
+ }
+
+ footer{
+  background-color: #191919ff;
+  padding: 20px;
+  margin-top: auto;
+
+ }
