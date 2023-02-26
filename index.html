@@ -1,16 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="theme-color" content="#191919ff">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Home</title>
-  </head>
-  <body>
+    <title>Report Score</title>   
+</head>
+<body>
+<script type="text/javascript">
+    var submitted = false;
+</script>
+<script>
 
-  <nav class="navbar navbar-expand-lg navbar-dark ">
+  var bucsScore = doc.getelement 
+
+</script>
+<iframe name = "hiddenConfirm" id="hiddenConfirm" style="display: none;" onload="if(submitted){window.location='submitted.html'}"></iframe>
+    
+<nav class="navbar navbar-expand-lg navbar-dark ">
     <a class="navbar-brand" href="index.html">
       <img src="rbrtv_logo.png" width="70" alt="">
     </a>
@@ -19,38 +28,37 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="index.html">Home<span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="scores.html">Report Score</a>
+        <a class="nav-item nav-link" href="index.html">Home</a>
+        <a class="nav-item nav-link active" href="scores.html">Report Score <span class="sr-only">(current)</span></a>
         <a class="nav-item nav-link" href="mailto:contactrbrtv@gmail.com">Contact Us</a>
       </div>
     </div>
   </nav>
-  
+    
+    <p class="text-center" style="color: white; font-size: 50px;"> SCORES </p>
 
-    <img src="numantrans.png"  width="300px" class="mx-auto d-block" style="position: relative; top: 2px; z-index: -1;">
-    <div class="container title_box">
-      <h3>The #1 place for RBR <br/> SPORTS and News <br/> UPDATES.</h3>
-      <a id="grad" style="margin-top: 20px;" class="btn btn-primary btn-lg btn-block" style="width: 100px;" href="scores.html">Report Score</a>
-    </div>
- 
-  
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLScbM1QGWFKu1CiTblICptUxCtlum6oz2ZBAb4e1VtPivUNaoQ/formResponse" method="post" target="hiddenConfirm" onsubmit="submitted=true" class="report_box form-class">
+    
+        <div class="score_info flex-parent jc-center">    
+                <div>
+                    <h4 style="text-align: center; margin-right: 40px;">BUCS</h4>
+                    <input type="text" placeholder="0" name="entry.1943967781" name="bucs" class="score_cell margin-right">
+                </div>
+                <div>
+                    <h4 style="text-align: center;">OPPONENT</h4>
+                    <input type="text" placeholder="0" name="entry.950902430" id="opponent" class="score_cell">
+                </div>
+            </div>
 
-  <div style="height: 100vh; padding-top: 40%;" id="about_us">
-    <h1 class="text-center"><u>About Us</u></h1>
-    <p class="text-justify" style="margin-top: 20px; margin: 30px; line-height: 25px; font-family: 'Oswald', sans-serif;">RBR.TV is a sports news outlet that covers events, games and competitions at Red Bank Regional high school in New Jersey. Our experienced team provides in-depth coverage and analysis to keep parents, students, and fans informed and up-to-date. Our commitment to professional quality and detailed updates sets us apart in the world of high school sports news. Follow us for the latest developments and stay connected to the exciting world of sports at Red Bank Regional.
-    <br/><br/>Contact: <a href="mailto:contactrbrtv@gmail.com">contactrbrtv@gmail.com</a>
-    </p>
-  </div>
-  
-  
-  <footer class="text-center">
-    <p style="margin: 0;">© 2023 RBR.TV</p>
-  </footer>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <input type="text" placeholder="OPPONENT NAME" name="entry.1821676837" class="score_cell long_cell" style="text-align: left; margin-top: 25px;">
+            <input type="text" placeholder="BOYS / GIRLS + SPORT" name="entry.1633223211" class="score_cell long_cell" style="text-align: left; margin-top: 25px;">
+            <input type="date" value="2023-02-26" name="entry.104567275" class="score_cell long_cell" style="text-align: left; margin-top: 25px;">
+            <button type="submit" id="grad" style="margin-top: 40px; width: 300px;" class="btn btn-primary btn-lg btn-block">SUBMIT</button>
+
+    </form>
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>
-
