@@ -9,10 +9,41 @@
     <title>Report Score</title>   
 </head>
 <body>
-<script type="text/javascript">
+<script>
+
+
+
+  function checkFields(){
+    var bucsScore = document.getElementById("bucs");
+    var opponentScore = document.getElementById("opponent");
+    var opponentName = document.getElementById("name");
+    var sportName = document.getElementById("sport");
     var submitted = false;
+
+    
+
+    if (bucsScore.value === "" || opponentScore.value === "" || opponentName.value === ""){
+      if (bucsScore.value === "") {
+      bucsScore.style.border = "4px solid #D04228";
+      }
+      if (opponentScore.value === ""){
+        opponentScore.style.border = "4px solid #D04228";
+      } 
+      if (opponentName.value === ""){
+        opponentName.style.border = "4px solid #D04228";
+      }
+      if (sportName.value === ""){
+        sportName.style.border = "4px solid #D04228";
+      }
+      return false;
+    }
+      return true;
+      submitted = true;
+  }
+  
+
 </script>
-<iframe name = "hiddenConfirm" id="hiddenConfirm" style="display: none;" onload="if(submitted){window.location='submitted.html'}"></iframe>
+<iframe name = "hiddenConfirm" id="hiddenConfirm" style="display: none;" onload="if(checkFields()){window.location='submitted.html'}"></iframe>
     
 <nav class="navbar navbar-expand-lg navbar-dark ">
     <a class="navbar-brand" href="index.html">
@@ -32,22 +63,22 @@
     
     <p class="text-center" style="color: white; font-size: 50px;"> SCORES </p>
 
-    <form action="https://docs.google.com/forms/d/e/1FAIpQLScbM1QGWFKu1CiTblICptUxCtlum6oz2ZBAb4e1VtPivUNaoQ/formResponse" method="post" target="hiddenConfirm" onsubmit="submitted=true" class="report_box form-class">
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLScbM1QGWFKu1CiTblICptUxCtlum6oz2ZBAb4e1VtPivUNaoQ/formResponse" method="post" target="hiddenConfirm" onsubmit="return checkFields()" class="report_box form-class">
     
         <div class="score_info flex-parent jc-center">    
                 <div>
                     <h4 style="text-align: center; margin-right: 40px;">BUCS</h4>
-                    <input type="text" placeholder="0" name="entry.1943967781" name="bucs" class="score_cell margin-right">
+                    <input type="number" placeholder="0" name="entry.1943967781" id="bucs" name="bucs" class="score_cell margin-right">
                 </div>
                 <div>
                     <h4 style="text-align: center;">OPPONENT</h4>
-                    <input type="text" placeholder="0" name="entry.950902430" id="opponent" class="score_cell">
+                    <input type="number" placeholder="0" name="entry.950902430" id="opponent" class="score_cell">
                 </div>
             </div>
 
-            <input type="text" placeholder="OPPONENT NAME" name="entry.1821676837" class="score_cell long_cell" style="text-align: left; margin-top: 25px;">
-            <input type="text" placeholder="BOYS / GIRLS + SPORT" name="entry.1633223211" class="score_cell long_cell" style="text-align: left; margin-top: 25px;">
-            <input type="date" value="2023-02-05" name="entry.104567275" class="score_cell long_cell" style="text-align: left; margin-top: 25px;">
+            <input type="text" placeholder="OPPONENT NAME" id="name" name="entry.1821676837" class="score_cell long_cell" style="text-align: left; margin-top: 25px;">
+            <input type="text" placeholder="BOYS / GIRLS + SPORT" id="sport" name="entry.1633223211" class="score_cell long_cell" style="text-align: left; margin-top: 25px;">
+            <input type="date" value="2023-03-16" name="entry.104567275" class="score_cell long_cell" style="text-align: left; margin-top: 25px;">
             <button type="submit" id="grad" style="margin-top: 40px; width: 300px;" class="btn btn-primary btn-lg btn-block">SUBMIT</button>
 
     </form>
